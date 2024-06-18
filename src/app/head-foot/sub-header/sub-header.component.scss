@@ -1,3 +1,4 @@
+
 @mixin gradient-background($start-color, $end-color) {
   background: linear-gradient(to right, $start-color, $end-color);
 }
@@ -36,9 +37,18 @@
   display: flex;
   justify-content: center;
   padding: 35px;
+  margin-bottom: -16px;
   color: #FDC52C; 
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
   font-size: 44px;                     
   letter-spacing: 1px;                 
   text-transform: uppercase; 
+  position: relative; /* Añadimos posición relativa para establecer un contexto para el degradado */
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.9)), url('../../../assets/logos/foto_aficio.jpg');
+  background-size: cover; /* Ajusta el tamaño de la imagen de fondo */
+  background-position: center; /* Centra la imagen de fondo */
+  background-repeat: no-repeat; /* Evita que se repita la imagen de fondo */
+
+  /* Ajusta el tamaño y la posición del fondo */
+  width: 100%;
 }
