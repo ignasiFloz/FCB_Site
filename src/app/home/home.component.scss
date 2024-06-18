@@ -1,0 +1,58 @@
+
+.container {
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: auto ;
+  }
+  
+  .nav-item {
+    border-radius: 3px;
+    font-weight: 900;
+    background-color: rgb(227, 227, 227);
+    padding-left: 7px ;
+    padding-right: 7px;
+    font-size: 9px;
+    list-style: none;
+    color: black;
+  }
+  
+  h2 {
+    font-size: 32px;
+    font-weight: 700; 
+  }
+  
+  img {
+    width: 420px;
+    height: 420px;
+  }
+  
+  ul {
+    margin-bottom: 50px;
+    gap: 15px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .konami {
+    width: 95px;
+    height: 95px;
+  }
+  
+  .firstTeam {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .smallText {
+    color: rgb(163, 163, 163);
+    font-size: smaller;
+    font-size: 10px; /* Modify the font size to make it even smaller */
+  }
+  
+  
