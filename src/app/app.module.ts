@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -11,6 +10,8 @@ import { SharedModule } from './shared/shared.module';
 import { HeaderComponent } from './head-foot/header/header.component';
 import { FooterComponent } from './head-foot/footer/footer.component';
 import { SubHeaderComponent } from './head-foot/sub-header/sub-header.component';
+import { GetPlayersService } from '../services/get-players.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,10 +27,12 @@ import { SubHeaderComponent } from './head-foot/sub-header/sub-header.component'
   imports: [
     SharedModule,
     AppRoutingModule,
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [
-    provideAnimationsAsync()
+    GetPlayersService,
+    provideAnimationsAsync(),
   ],
   bootstrap: [AppComponent]
 })
