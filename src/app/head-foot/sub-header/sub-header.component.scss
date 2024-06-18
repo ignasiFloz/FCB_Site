@@ -1,0 +1,44 @@
+@mixin gradient-background($start-color, $end-color) {
+  background: linear-gradient(to right, $start-color, $end-color);
+}
+
+
+.container {
+  @include gradient-background(#ff0022, #007bff);
+  width: 100%;
+}
+
+
+.sub-header {
+  
+  display: inline;
+  width: auto;
+  gap: 3rem;
+  width: 15px;
+  height: 25px;
+  align-items: center;
+  border: transparent
+}
+
+.sub-header button {
+  background-color: #007bff00; /* Button background color */
+  color: #fff; /* Text color */
+  border: transparent; /* Remove default button border */
+  padding: 8px 16px; /* Padding inside the button */
+  cursor: pointer; /* Show pointer cursor on hover */
+}
+
+.sub-header button:hover {
+  border-bottom: 4px solid yellow; /* Yellow-colored bottom border */
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  padding: 35px;
+  color: #FDC52C; 
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+  font-size: 44px;                     
+  letter-spacing: 1px;                 
+  text-transform: uppercase; 
+}
