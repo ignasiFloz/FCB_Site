@@ -13,7 +13,6 @@
 .sub-header {
   
   display: inline;
-  width: auto;
   gap: 3rem;
   width: 15px;
   height: 25px;
@@ -36,7 +35,8 @@
 .title {
   display: flex;
   justify-content: center;
-  padding: 35px;
+  padding-bottom: 35px;
+  padding-top: 35px;
   margin-bottom: -16px;
   color: #FDC52C; 
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
@@ -50,5 +50,4 @@
   background-repeat: no-repeat; /* Evita que se repita la imagen de fondo */
 
   /* Ajusta el tamaño y la posición del fondo */
-  width: 100%;
 }

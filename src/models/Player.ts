@@ -18,6 +18,7 @@ export class Player extends Human implements IStats, IHonors {
         cleanSheets: number,
         saves: number
     };
+    goals?: number;
     laLiga: number;
     championsLeague: number;
     copaDelRey: number;
@@ -35,11 +36,14 @@ export class Player extends Human implements IStats, IHonors {
         this.weight = obj.weight;
         this.name = obj.name;
         this.height = obj.height;
+        this
+        
 
         this.games = obj.games;
         this.cleanSheets = obj.cleanSheets;
         this.saves = obj.saves;
         this.seasons = obj.seasons;
+        
 
         this.laLiga = obj.laLiga;
         this.championsLeague = obj.championsLeague;

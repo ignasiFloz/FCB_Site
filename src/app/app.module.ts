@@ -32,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   providers: [
     GetPlayersService,
+    CardComponent,
     provideAnimationsAsync(),
   ],
   bootstrap: [AppComponent]

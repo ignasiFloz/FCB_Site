@@ -5,7 +5,7 @@ export interface IStats {
       seasons?: {
         start?: number,
         end?: number,
-        games?: number,
+        assists?: number,
         cleanSheets?: number,
         saves?: number
       }
