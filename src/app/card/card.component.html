@@ -1,26 +1,35 @@
-<ng-container>
-    <div class="card-group">
-      <div class="card-body">
-        <a class="image-container" [routerLink]="['/player', player.id]">
-          <img [src]="player.image" [alt]="player.name" />
-          <div class="text-overlay">
-            {{player.name}}
-            <div *ngIf="player.position === 'defender'; else notDefender">
-              {{player.games}} 
-              {{player.cleanSheets}}
-              {{player.saves}}
-            </div>
-            <ng-template #notDefender>
-              <div>
-                <!-- Contenido alternativo si player.position no es 'defender' -->
-                <span>{{player.games}}</span>
-                <span>{{player.seasons}}</span>
-              </div>
-            </ng-template >
+<ng-container *ngIf="player.position === 'goalkeeper'; else nonGoalkeeper">
+  <div class="card-group">
+    <div class="card-body">
+      <a class="image-container" [routerLink]="['/player', player.id]">
+        <img [src]="player.image" [alt]="player.name" />
+        <div class="text-overlay">
+          {{player.name}}
+          <div class="stats">
+            PARTIDOS {{player.stats.games}}
+            PORTERÍA A CERO {{player.stats.cleanSheets}}
+            PARADAS {{player.stats.saves}}
           </div>
-          </a>
-      </div>
+        </div>
+      </a>
     </div>
-  </ng-container>
+  </div>
+</ng-container>
 
- 
+<ng-template #nonGoalkeeper>
+  <div class="card-group">
+    <div class="card-body">
+      <a class="image-container" [routerLink]="['/player', player.id]">
+        <img [src]="player.image" [alt]="player.name" />
+        <div class="text-overlay">
+          {{player.name}}
+          <div class="stats">
+            PARTIDOS: {{player.stats.games}}
+            GOLES: {{player.stats.seasons.goals}}
+            ASISTENCIAS: {{player.stats.assists}}
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</ng-template>

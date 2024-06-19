@@ -14,6 +14,6 @@ export class GetPlayersService {
 
   getPlayers(): Observable<Player[]> {
     return this.http.get<Player[]>(this.jsonUrl)
-      
   }
+  
 }

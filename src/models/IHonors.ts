@@ -1,6 +1,6 @@
     export interface IHonors { 
-        laLiga: number,
-        championsLeague: number,
-        copaDelRey: number,
-        clubWorldCup: number
+        laLiga: number;
+        championsLeague: number;
+        copaDelRey: number;
+        clubWorldCup: number;
     }
