@@ -1,23 +1,37 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
+import { Player } from '../../models/Player';
+import { GetPlayersService } from '../../services/get-players.service';
 
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
-  styleUrls: ['./details.component.css']
+  styleUrls: ['./details.component.scss']
 })
 export class DetailsComponent implements OnInit {
-  lastUrlSegment?: string;
-  route? = Inject(ActivatedRoute)
+  playerId?: string;
+  players?: Player[];
+
+  constructor(
+    private playersUtils: GetPlayersService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     this.route.paramMap.pipe(
       switchMap((params: any) => {
-        // Obtener el parámetro 'id' de la URL
-        this.lastUrlSegment = params.get('id');
-        return params;
+        this.playerId = params.get('id');
+        return this.playersUtils.getPlayers();
       })
-    ).subscribe();
+    ).subscribe(
+      (players: Player[]) => {
+        this.players = players;
+        console.log(players);
+      },
+      (error) => {
+        throw new Error('Error 6969');
+      }
+    );
   }
 }

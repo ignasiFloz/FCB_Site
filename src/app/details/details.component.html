@@ -1,4 +1,5 @@
-<!-- <div class="player-card">
+<ng-container *ngFor="let player of players">
+  <div *ngIf="player.id === playerId" class="player-card">
     <div class="card-header">
       <img [src]="player.image" [alt]="player.name" class="player-image" />
       <div class="player-info">
@@ -32,4 +33,4 @@
       </div>
     </div>
   </div>
-   -->
+</ng-container>

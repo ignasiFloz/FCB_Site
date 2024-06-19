@@ -10,6 +10,5 @@ export class CardComponent implements OnInit{
   @Input() player!: Player;
   
   ngOnInit(): void {
-  console.log(this.player)
   }  
 }
