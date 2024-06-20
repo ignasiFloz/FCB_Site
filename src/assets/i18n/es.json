@@ -1,0 +1,25 @@
+{
+"games": "partidos", 
+"cleansheets" : "Porterías a cero: ", 
+"saves" : "Paradas",
+"placeBfBirth": "Lugar de Nacimiento: ",
+"dateOfBirth" : "Fecha de Nacimiento: ",
+"weight": "Peso: ",
+"height": "Altura: ",
+"headerButtons1" : "PRIMER EQUIPO",
+"headerButtons2" : "CLUB",
+"headerButtons3" : "ESPAI BARCA",
+"headerButtons4" : "SOCIOS",
+"headerButtons5" : "MAS EQUIPOS",
+"subHeaderButtons1" : "PRIMER EQUIPO",
+"subHeaderButtons2" : "PRIMER EQUIPO",
+"subHeaderButtons3" : "CLUB",
+"subHeaderButtons4" : "CLUB",
+"subHeaderButtons5" : "ESPAI BARCA",
+"subHeaderButtons6" : "ESPAI BARCA",
+"subHeaderButtons7" : "SOCIOS",
+"subHeaderButtons8" : "SOCIOS",
+"subHeaderButtons9" : "MAS EQUIPOS"
+}
+
+

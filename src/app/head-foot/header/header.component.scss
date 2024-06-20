@@ -1,0 +1,21 @@
+.nav-tabs {
+  background-color: #15094a;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+
+  .nav-logo {
+    margin-right: 10px;
+  }
+
+
+}
+button {
+  background-color: #15094a;
+  color: white;
+  border: transparent;
+  cursor: pointer;
+  &:hover {
+    border-bottom: 4px solid yellow; /* Yellow-colored bottom border */
+  }
+}

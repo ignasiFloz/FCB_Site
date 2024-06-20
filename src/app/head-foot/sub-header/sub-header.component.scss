@@ -1,0 +1,53 @@
+
+@mixin gradient-background($start-color, $end-color) {
+  background: linear-gradient(to right, $start-color, $end-color);
+}
+
+
+.container {
+  @include gradient-background(#ff0022, #007bff);
+  width: 100%;
+}
+
+
+.sub-header {
+  
+  display: inline;
+  gap: 3rem;
+  width: 15px;
+  height: 25px;
+  align-items: center;
+  border: transparent
+}
+
+.sub-header button {
+  background-color: #007bff00; /* Button background color */
+  color: #fff; /* Text color */
+  border: transparent; /* Remove default button border */
+  padding: 8px 16px; /* Padding inside the button */
+  cursor: pointer; /* Show pointer cursor on hover */
+}
+
+.sub-header button:hover {
+  border-bottom: 4px solid yellow; /* Yellow-colored bottom border */
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 35px;
+  padding-top: 35px;
+  margin-bottom: -16px;
+  color: #FDC52C; 
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+  font-size: 44px;                     
+  letter-spacing: 1px;                 
+  text-transform: uppercase; 
+  position: relative; /* Añadimos posición relativa para establecer un contexto para el degradado */
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.9)), url('../../../assets/logos/foto_aficio.jpg');
+  background-size: cover; /* Ajusta el tamaño de la imagen de fondo */
+  background-position: center; /* Centra la imagen de fondo */
+  background-repeat: no-repeat; /* Evita que se repita la imagen de fondo */
+
+  /* Ajusta el tamaño y la posición del fondo */
+}

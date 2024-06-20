@@ -1,1 +1,78 @@
-<p>home works!</p>
+<div class="container">
+  <div class="firstTeam">
+    <div><h2>FC Barcelona First Team</h2></div>
+    <div class="smallText">
+      PRESENTADO POR
+      <img class="konami" src="../../assets/logos/konami-24-logo.png" alt="" />
+    </div>
+  </div>
+  <ul class="nav nav-tabs" id="myTab">
+    <li class="buttonAnchor">
+      <a (click)="scrollToSection($event, 'porteros')">PORTEROS</a>
+    </li>
+    <li class="buttonAnchor">
+      <a (click)="scrollToSection($event, 'defensas')">DEFENSAS</a>
+    </li>
+    <li class="buttonAnchor">
+      <a (click)="scrollToSection($event, 'midfielders')">CENTROCAMPISTAS</a>
+    </li>
+    <li class="buttonAnchor">
+      <a (click)="scrollToSection($event, 'forwards')">DELANTEROS</a>
+    </li>
+    <li class="buttonAnchor">
+      <a (click)="scrollToSection($event, 'cuerpotecnico')">CUERPO TECNICO</a>
+    </li>
+  </ul>
+  <div class="row">
+    <div class="card-title">Porteros</div>
+    <div id="porteros">
+      <ng-container *ngFor="let player of players">
+        <div class="card-group">
+          <app-card
+            *ngIf="player.position === 'goalkeeper'"
+            [player]="player"
+          ></app-card>
+        </div>
+      </ng-container>
+    </div>
+
+    <div class="card-title">Defensas</div>
+    <div id="defensas">
+      <ng-container *ngFor="let player of players">
+        <div class="card-group">
+          <app-card
+            *ngIf="player.position === 'defender'"
+            [player]="player"
+          ></app-card>
+        </div>
+      </ng-container>
+    </div>
+    <div class="card-title">Centrocampistas</div>
+    <div id="midfielders">
+      <ng-container *ngFor="let player of players">
+        <div class="card-group">
+          <app-card
+            *ngIf="player.position === 'midfielder'"
+            [player]="player"
+          ></app-card>
+        </div>
+      </ng-container>
+    </div>
+    <div class="card-title">Delanteros</div>
+    <div id="forwards">
+      <ng-container *ngFor="let player of players">
+        <div class="card-group">
+          <app-card
+            *ngIf="player.position === 'forward'"
+            [player]="player"
+          ></app-card>
+        </div>
+      </ng-container>
+    </div>
+    <div class="card-title">Cuerpo Tecnico</div>
+    <div id="cuerpotecnico">
+        <div class="card-group">
+        </div>
+    </div>
+  </div>
+</div>

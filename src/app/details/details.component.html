@@ -1,1 +1,36 @@
-<p>details works!</p>
+<ng-container *ngFor="let player of players">
+  <div *ngIf="player.id === playerId" class="player-card">
+    <div class="card-header">
+      <img [src]="player.image" [alt]="player.name" class="player-image" />
+      <div class="player-info">
+        <h2>{{player.name}}</h2>
+        <p class="position">{{player.position}}</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="personal-info">
+        <p><strong>Place of Birth:</strong> {{player.placeOfBirth}}</p>
+        <p><strong>Date of Birth:</strong> {{player.dateOfBirth}}</p>
+        <p><strong>Weight:</strong> {{player.weight}} kg</p>
+        <p><strong>Height:</strong> {{player.height}} cm</p>
+      </div>
+      <div class="biography">
+        <p>{{player.biography}}</p>
+      </div>
+      <div class="career-stats">
+        <h3>Career Stats</h3>
+        <p><strong>Games:</strong> {{player.stats.games}}</p>
+        <p><strong>Clean Sheets:</strong> {{player.stats.cleanSheets}}</p>
+        <p><strong>Saves:</strong> {{player.stats.saves}}</p>
+      </div>
+      <div class="season-stats">
+        <h3>Season Stats ({{player.stats.seasons.start}} - {{player.stats.seasons.end}})</h3>
+        <p><strong>Games:</strong> {{player.stats.seasons.games}}</p>
+        <p><strong>Clean Sheets:</strong> {{player.stats.seasons.cleanSheets}}</p>
+        <p><strong>Saves:</strong> {{player.stats.seasons.saves}}</p>
+        <p><strong>Goals:</strong> {{player.stats.seasons.goals}}</p>
+        <p><strong>Assists:</strong> {{player.stats.seasons.assists}}</p>
+      </div>
+    </div>
+  </div>
+</ng-container>
