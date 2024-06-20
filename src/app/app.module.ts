@@ -11,7 +11,14 @@ import { HeaderComponent } from './head-foot/header/header.component';
 import { FooterComponent } from './head-foot/footer/footer.component';
 import { SubHeaderComponent } from './head-foot/sub-header/sub-header.component';
 import { GetPlayersService } from '../services/get-players.service';
-import { HttpClientModule } from '@angular/common/http';
+import {HttpClientModule, HttpClient} from '@angular/common/http';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { ReactiveFormsModule } from '@angular/forms';
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
+
 
 @NgModule({
   declarations: [
@@ -26,9 +33,17 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     SharedModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [
     GetPlayersService,
